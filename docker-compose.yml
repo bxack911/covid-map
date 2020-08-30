@@ -1,0 +1,44 @@
+version: "3"
+ 
+services:
+    apache:
+        build: ./docker/apache
+        ports:
+            - "8081:80"
+        volumes:
+            - ./html:/var/www/html/:z
+            - ./docker/apache/php.ini:/usr/local/etc/php/php.ini:z
+        networks:
+            - backend
+ 
+    db:
+        image: "mysql:8"
+        volumes:
+            - ./docker/db:/var/lib/mysql
+        environment:
+               MYSQL_ROOT_PASSWORD: password
+               MYSQL_DATABASE: covid_map
+               MYSQL_USER: covid_map
+               MYSQL_PASSWORD: password
+        networks:
+            - backend
+ 
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin:latest
+        environment:
+            - PMA_HOST=db
+            - PMA_USER=covid_map
+            - PMA_PASSWORD=password
+        volumes:
+            - ./docker/apache/upload.ini:/usr/local/etc/php/php.ini:z
+            - /sessions
+        ports:
+            - "8082:80"
+        networks:
+            - backend
+ 
+networks:
+    front:
+        external:
+            name: front
+    backend:
