@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae1d1814-687c-4bf3-9951-52427d0175c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clear_db.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
@@ -165,7 +166,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598549770036</updated>
       <workItem from="1598549771086" duration="6457000" />
-      <workItem from="1598810408951" duration="2458000" />
+      <workItem from="1598810408951" duration="2806000" />
     </task>
     <servers />
   </component>
